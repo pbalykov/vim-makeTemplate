@@ -1,3 +1,13 @@
+" plugin/makeTemplate.vim
+" Vim plugin for creating build system templates
+" Author: pbalykov
+" Version: 0.1
+
+if exists('g:loaded_make_template')
+    finish
+endif
+let g:loaded_make_template = 1
+
 function! FunSampleMake()
     let data = [
         \".PHONY: all clean run", "",
