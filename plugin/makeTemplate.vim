@@ -18,11 +18,11 @@ function! FunSampleMake()
     \]
 
     if !filereadable("Makefile")
-        execute 'sp Makefile' "
+        tabnew Makefile
         call setline(1, data)
         write
     else
-        execute 'sp Makefile'
+        tabnew Makefile
     endif
 
 endfunction
@@ -48,13 +48,34 @@ function! FunSampleQmake(nameFile)
     if !(filereadable(name) )
         let choice = confirm("QMake выберите тип: ", "&Term\n&GUI", 1)
         let data = ArrQMake(choice)
-        execute "sp " . name
+        tabnew name
         call setline(1, data)
         write
     else
-        execute "sp " . name
+        tabnew name
+    endif
+endfunction
+
+function! FunSampleCMake()
+    if !(filereadable("CMakeLists.txt") ) 
+        let data = ["cmake_minimum_required(VERSION 3.10)",
+                    \"project(MyProject)", "",
+                    \"set(CMAKE_CXX_STANDARD 17)", "",
+                    \"set(HEADERS", "", ")", "",
+                    \"add_executable(${PROJECT_NAME}", "",
+                    \"${HEADERS}",
+                    \")", "",
+                    \"target_include_directories(${PROJECT_NAME} PRIVATE include)", "",
+            \"target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra)"
+            \]
+        tabnew "CMakeLists.txt"
+        call setline(1, data)
+        write
+    else
+        tabnew "CMakeLists.txt"
     endif
 endfunction
 
 command! SamleMake call FunSampleMake()
+command! SamleCMake call FunSampleCMake()
 command! -nargs=* SamleQmake call FunSampleQmake(<f-args>)
