@@ -1,0 +1,105 @@
+*makeTemplate.txt*   Plugin for creating build system templates
+
+Author: pbalykov
+Version: 1.0.0
+
+This plugin provides commands to generate template files for various build 
+systems including Make, QMake and CMake.
+
+COMMANDS                                           *makeTemplate-commands*
+
+:SamleMake~
+    Creates a basic Makefile template in the current directory if it doesn't
+    already exist. Opens the file in a new tab.
+
+:SamleCMake~
+    Creates a basic CMakeLists.txt template in the current directory if it 
+    doesn't already exist. Opens the file in a new tab.
+
+:SamleQmake {name}~
+    Creates a QMake project file (.pro) with the specified name. Prompts the
+    user to choose between terminal and GUI application templates.
+    
+    Example:
+        :SamleQmake myproject
+
+FUNCTIONS                                         *makeTemplate-functions*
+
+FunSampleMake()~
+    Generates a standard Makefile template with common targets (all, clean,
+    run) and C++ compilation rules.
+
+FunSampleCMake()~
+    Generates a basic CMakeLists.txt template with C++17 standard and common
+    compiler options.
+
+FunSampleQmake(nameFile)~
+    Generates a QMake project file. The user can choose between:
+        1. Terminal application (core module)
+        2. GUI application (core, gui, and widgets modules)
+
+ArrQMake(value)~
+    Returns the corresponding QMake template array:
+        1 - Terminal application template
+        2 - GUI application template
+
+INSTALLATION                                      *makeTemplate-installation*
+
+1. Copy makeTemplate.vim to your Vim plugin directory:
+   - Linux/Mac: ~/.vim/plugin/
+   - Windows: ~/vimfiles/plugin/
+
+2. Restart Vim or reload your configuration.
+
+USAGE                                             *makeTemplate-usage*
+
+Simply run one of the provided commands in Vim while in your project 
+directory. The plugin will check if the target file already exists and only 
+create a new template if the file doesn't exist.
+
+Example workflow:
+    :cd ~/my_project
+    :SamleCMake
+
+This will create a CMakeLists.txt file with basic configuration in a new tab.
+
+FEATURES                                          *makeTemplate-features*
+
+- Safe file creation (checks for existing files)
+- Multiple build system support
+- Template customization through interactive prompts (QMake)
+- Standard compiler flags and configurations
+- Common build targets (clean, run, all)
+
+FILE TEMPLATES                                    *makeTemplate-templates*
+
+Makefile:
+    - Standard C++ compilation rules
+    - Common targets (all, clean, run)
+    - Configurable compiler and flags
+
+QMake (.pro files):
+    - Terminal application template (core module)
+    - GUI application template (core, gui, widgets modules)
+    - C++17 standard configuration
+
+CMakeLists.txt:
+    - Basic CMake configuration
+    - C++17 standard setting
+    - Common compiler warnings
+    - Header file inclusion
+
+LIMITATIONS                                       *makeTemplate-limitations*
+
+- Currently only supports C++ projects
+- Templates are basic and might need manual customization
+- QMake template selection is limited to two options
+
+CHANGELOG                                         *makeTemplate-changelog*
+
+Version 1.0.0:
+    - Initial release
+    - Basic Make, QMake and CMake template support
+
+------------------------------------------------------------------------------
+For suggestions and bug reports, contact the author: pbalykov

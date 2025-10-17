@@ -1,7 +1,7 @@
 " plugin/makeTemplate.vim
 " Vim plugin for creating build system templates
 " Author: pbalykov
-" Version: 0.1
+" Version: 1.0.0
 
 if exists('g:loaded_make_template')
     finish

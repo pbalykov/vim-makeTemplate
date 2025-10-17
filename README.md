@@ -1,16 +1,30 @@
-# vim-makeTemplate Vim Plugin
-A Vim plugin to instantly generate starter templates for Makefile, CMakeLists.txt, and QMake .pro files.
-
-
+# vim-makeTemplate
+  
+![Support Neovim 0.2.0 or above](https://img.shields.io/badge/support-Neovim%200.2.0%20or%20above-bluegreen.svg?style=flat-square)
+![Support Vim 8.0.0027 or above](https://img.shields.io/badge/support-Vim%208.0.0027%20or%20above-darkgreen.svg?style=flat-square)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
+  
+A Vim plugin to instantly generate starter templates for Makefile, CMakeLists.txt, and QMake .pro files.  
+  
 ## Features
-
+ 
 - Create Makefile templates
 - Create QMake project files (.pro)
 - Create CMakeLists.txt templates
 
-## Installation
-
-Copy `plugin/makeTemplate.vim` to your Vim plugin directory.
+## Install
+ 
+Use [junegunn/vim-plug] or [Shougo/dein.vim] like:
+ 
+```vim
+" Plug.vim
+Plug 'pbalykov/vim-makeTemplate'
+ 
+" dein.vim
+call dein#add('pbalykov/vim-makeTemplate')
+```
+ 
+Or copy contents of the repository into your runtimepath manually.
 
 ## Usage
 
@@ -18,6 +32,5 @@ Copy `plugin/makeTemplate.vim` to your Vim plugin directory.
 - `:SamleCMake` - Create CMakeLists.txt template
 - `:SamleQmake <project_name>` - Create QMake project file
 
-## License
-
-MIT
+## Authors
+pbalykov - developer [github](https://github.com/pbalykov) куда можно добавитьь пример
