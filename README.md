@@ -1,7 +1,7 @@
 # vim-makeTemplate
   
 ![Support Neovim 0.2.0 or above](https://img.shields.io/badge/support-Neovim%200.2.0%20or%20above-bluegreen.svg?style=flat-square)
-![Support Vim 8.0.0 or above](https://img.shields.io/badge/support-Vim%208.0.0027%20or%20above-darkgreen.svg?style=flat-square)
+![Support Vim 8.1.0 or above](https://img.shields.io/badge/support-Vim%208.0.0027%20or%20above-darkgreen.svg?style=flat-square)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
   
 A Vim plugin to instantly generate starter templates for Makefile, CMakeLists.txt, and QMake .pro files.  
