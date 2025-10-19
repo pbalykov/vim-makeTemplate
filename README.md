@@ -33,4 +33,4 @@ Or copy contents of the repository into your runtimepath manually.
 - `:SamleQmake <project_name>` - Create QMake project file
 
 ## Authors
-pbalykov - developer [github](https://github.com/pbalykov) куда можно добавитьь пример
+pbalykov - developer [github](https://github.com/pbalykov)
